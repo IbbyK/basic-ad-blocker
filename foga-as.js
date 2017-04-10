@@ -3,9 +3,10 @@
 // FUNCTIONS
 function removcontent(){
 	console.log("Starting content removal");
-	var[] conts = document.getElementById("bnr");
-	console.log("Found " + conts.length + " bnr ID divs");
-	for(var i = 0; i < conts.length; i++){
+	var conts = document.getElementById("bnr");
+	var amount = conts.length;
+	console.log("Found " + amount + " bnr ID divs");
+	for(var i = 0; i < amount; i++){
 		conts[i].innerHTML = "BLOCKED AD";
 		console.log("Removed ad content");
 	}
@@ -13,9 +14,10 @@ function removcontent(){
 }
 function removframs(){
 	console.log("Starting removal of ad frames...");
-	var[] frams = document.getElementByClassName("ad_guts");
-	console.log("Found " + conts.length + " ad_guts class divs");
-	for(var i = 0; i < conts.length; i++){
+	var frams = document.getElementsByClassName("ad_guts");
+	var amount = frams.length;
+	console.log("Found " + amount + " ad_guts class divs");
+	for(var i = 0; i < amount; i++){
 		frams[i].innerHTML = "Ad removal service";
 		console.log("Removed ad frame!");
 	}
@@ -23,5 +25,5 @@ function removframs(){
 }
 
 //MAIN
-removcontent();
+// removcontent();
 removframs();
